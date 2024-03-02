@@ -1,8 +1,8 @@
 package syslog
 
 import (
+	"github.com/kentik/go-syslog/format"
 	. "gopkg.in/check.v1"
-	"go-syslog/format"
 )
 
 type HandlerSuite struct{}

@@ -1,27 +1,27 @@
 package main
 
 import (
-   "fmt"
-   syslog "go-syslog"
+	"fmt"
+	syslog "github.com/kentik/go-syslog"
 )
 
 func main() {
-   channel := make(syslog.LogPartsChannel)
-   handler := syslog.NewChannelHandler(channel)
+	channel := make(syslog.LogPartsChannel)
+	handler := syslog.NewChannelHandler(channel)
 
-   server := syslog.NewServer()
-   server.SetFormat(syslog.RFC5424)
-   server.SetHandler(handler)
-   server.ListenUDP("0.0.0.0:514")
-   server.ListenTCP("0.0.0.0:514")
+	server := syslog.NewServer()
+	server.SetFormat(syslog.RFC5424)
+	server.SetHandler(handler)
+	server.ListenUDP("0.0.0.0:514")
+	server.ListenTCP("0.0.0.0:514")
 
-   server.Boot()
+	server.Boot()
 
-   go func(channel syslog.LogPartsChannel) {
-      for logParts := range channel {
-         fmt.Println(logParts)
-      }
-   }(channel)
+	go func(channel syslog.LogPartsChannel) {
+		for logParts := range channel {
+			fmt.Println(logParts)
+		}
+	}(channel)
 
-   server.Wait()
+	server.Wait()
 }

@@ -1,17 +1,17 @@
 package format
 
 import (
-   "bufio"
+	"bufio"
 
-   "go-syslog/internal/syslogparser/rfc5424"
+	"github.com/kentik/go-syslog/internal/syslogparser/rfc5424"
 )
 
 type RFC5424 struct{}
 
 func (f *RFC5424) GetParser(line []byte) LogParser {
-   return &parserWrapper{rfc5424.NewParser(line)}
+	return &parserWrapper{rfc5424.NewParser(line)}
 }
 
 func (f *RFC5424) GetSplitFunc() bufio.SplitFunc {
-   return nil
+	return nil
 }
