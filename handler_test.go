@@ -1,7 +1,7 @@
 package syslog
 
 import (
-	"github.com/kentik/go-syslog/format"
+	"github.com/kentik/the-library-formally-known-as-go-syslog/format"
 	. "gopkg.in/check.v1"
 )
 
