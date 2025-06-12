@@ -1,4 +1,4 @@
-module github.com/kentik/go-syslog
+module github.com/kentik/the-library-formally-known-as-go-syslog
 
 go 1.21
 

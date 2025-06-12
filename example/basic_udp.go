@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	syslog "github.com/kentik/go-syslog"
+	syslog "github.com/kentik/the-library-formally-known-as-go-syslog"
 )
 
 func main() {

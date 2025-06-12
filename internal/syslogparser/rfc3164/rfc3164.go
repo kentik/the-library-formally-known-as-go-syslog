@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/kentik/go-syslog/internal/syslogparser"
+	"github.com/kentik/the-library-formally-known-as-go-syslog/internal/syslogparser"
 )
 
 type Parser struct {

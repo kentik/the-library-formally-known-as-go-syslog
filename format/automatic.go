@@ -5,8 +5,8 @@ import (
 	"bytes"
 	"strconv"
 
-	"github.com/kentik/go-syslog/internal/syslogparser/rfc3164"
-	"github.com/kentik/go-syslog/internal/syslogparser/rfc5424"
+	"github.com/kentik/the-library-formally-known-as-go-syslog/internal/syslogparser/rfc3164"
+	"github.com/kentik/the-library-formally-known-as-go-syslog/internal/syslogparser/rfc5424"
 )
 
 /* Selecting an 'Automatic' format detects incoming format (i.e. RFC3164 vs RFC5424) and Framing

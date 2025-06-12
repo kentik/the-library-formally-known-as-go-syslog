@@ -5,7 +5,7 @@ import (
 	"bytes"
 	"strconv"
 
-	"github.com/kentik/go-syslog/internal/syslogparser/rfc5424"
+	"github.com/kentik/the-library-formally-known-as-go-syslog/internal/syslogparser/rfc5424"
 )
 
 type RFC6587 struct{}
